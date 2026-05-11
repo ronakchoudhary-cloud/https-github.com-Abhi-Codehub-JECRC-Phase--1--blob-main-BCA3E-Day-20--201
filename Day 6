@@ -1,10 +1,155 @@
-// program 2
+// Program -- 1
+#include <iostream>
+using namespace std;
+int main() {
+   int coffee , bill;
+   cout << "Enter number of coffee-: ";
+   cin >> coffee;
+   bill = 30 * coffee;
+cout << " Price will be " << bill;
+    return 0;
+}
+
+//Program --2
 #include <iostream>
 using namespace std;
 
 int billing(int a){
-    return (a - a*0.10);
+    return a * 30;
 }
 int main (){
-    cout <<billing(100);
+    cout << billing(50);
 }
+
+
+// Program 3
+#include <iostream>
+using namespace std;
+
+int billing(int a){
+    return (a - a*0.20);
+}
+int main (){
+    cout << billing(50);
+}
+
+
+// Program 4 // Smart AC remote
+#include <iostream>
+#include <string>
+using namespace std;
+
+void setTemprature() {
+    cout << "Temprature Set to 22°C" << "\n";
+}
+
+void setTemprature(double temp) {
+    cout << "Temprature Set to " << temp << "°C" << "\n";
+}
+
+void setTemprature(string mode) {
+    if (mode == "ECONOMY MODE") {
+        cout << "Temprature set to 25 °C\n";
+    }
+    else if (mode == "Power Chill Turbo") {
+        cout << "Temprature set to 16 °C\n";
+    }
+}
+
+int main() {
+    setTemprature();
+    setTemprature(20.5);
+    setTemprature("ECONOMY MODE");
+    setTemprature("Power Chill Turbo");
+
+    return 0;
+}
+
+
+//Program 5 Pointers
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a = 10;
+    int *ptr1 = &a;
+    
+    int b = 20;
+    int *ptr2 = &b;
+    
+    int c = *ptr1 + *ptr2;  
+    cout << c;
+
+    return 0;
+}
+
+// Program 6 
+// Swapping of 2 Number value usinf pointer and using functions
+#include <iostream>
+using namespace std;
+
+void swapNumber(int *ptr1, int *ptr2){
+int temp = *ptr1;
+*ptr1 = *ptr2;
+*ptr2 = temp; 
+}
+
+int main() {
+    int a, b;
+    cin >> a;
+    cin >> b;
+    swapNumber(&a, &b);
+    cout << a << " " << b;
+
+    return 0;
+}
+
+
+// program -- 7
+// class
+#include <iostream>
+using namespace std;
+
+class student{
+
+public:
+    string name;
+    int age;
+    
+void introduce(){
+    cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+    }
+};
+
+int main(){
+    student s1, s2;
+    s1.name = "Ishaan";
+    s1.age = 24;
+    s2.name = "Rahul";
+    s2.age = 23;
+    s1.introduce();
+    s2.introduce();
+}
+
+/ program -- 8
+// class
+// Types
+//7.1 Public
+//7.2 Private
+//7.3 Protected
+
+//7.1 Public
+#include <iostream>
+using namespace std;
+class publicPark{
+    public:
+    void enter() {
+        cout << "Anyone can enter in the park..";
+    }
+};
+int main(){
+    publicPark p;
+    p.enter();
+}
+
